@@ -9,9 +9,9 @@ def index(request):
     }
     return render(request, 'alunos/index.html',contexto)
 
-def detalhe_aluno(request):
-    alunos_detalhados = Aluno.objects.all() # Select do django
+def detalhe_aluno(request, aluno_id):
+    aluno = Aluno.objects.get(id=aluno_id) # Select do django
     contexto = {
-        'aluno': alunos_detalhados,
+        'aluno': aluno
     }
     return render(request, 'alunos/detalhe_aluno.html',contexto)
