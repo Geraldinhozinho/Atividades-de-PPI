@@ -8,6 +8,12 @@ class Aluno(models.Model):
     idade = models.IntegerField(null=True)
     curso = models.CharField(max_length=50, null=True)
     altura = models.CharField(max_length=5, null=True )
-    #curso = models.ForeignKey(Aluno, on_delete=models.CASCADE)
     def __str__(self):
         return self.nome
+    
+class Interesses(models.Model):
+    nome = models.OneToOneField(Aluno, on_delete=models.CASCADE)
+    descricao = models.TextField()
+    
+    def __str__(self):
+        return self.descricao

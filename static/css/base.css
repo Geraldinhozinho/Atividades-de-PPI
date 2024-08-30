@@ -6,13 +6,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: chocolate;
     
 }
 
 .parte_central{
     background-color: rgb(182, 187, 187);
-    width: 100%;
+    padding: 1%;
+    margin-bottom: 100px;
+    margin-top: 60px;
 }
 .navbar {
     display: flex;
@@ -20,7 +21,12 @@ body {
     justify-content: space-between;
     background-color: #333;
     padding: 10px 20px;
+    position: fixed; /* Torna a barra de navegação fixa */
+    top: 0; /* Posiciona a barra no topo da página */
+    width: 100%; /* Garante que a barra ocupe toda a largura da página */
+    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
 }
+
 
 .logo {
     width: 40px;
@@ -56,13 +62,15 @@ body {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 5px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    
+
 }
 
 .footer p {
-    margin: 5px 0;
+    margin: 2px 0;
     font-size: 14px;
 }

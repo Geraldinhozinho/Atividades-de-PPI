@@ -1,74 +1,77 @@
 h1 {
     color: rgb(71, 250, 17);
-    font-size: 50px;
+    font-size: 30px;
     font-family: sans-serif;
     text-align: center;
     display: block;
-    margin: 0px 0px 90px 0px;
+    margin: 0px 0px 20px 0px;
     background-color: rgb(145, 140, 140);
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
-
 .container {
     display: flex;
     align-items: flex-start; /* Alinha a imagem e o texto no topo */
-    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    gap: 20px; /* Espaçamento entre a imagem e o conteúdo da lista */
     padding: 20px;
 }
 
+
 .imagem {
-    width: 300px;
+    width: 400px;
     height: auto;
     border-radius: 8px;
     margin-left: 80px;
 }
 
-.lista {
-    display: flex;
-    flex-direction: column; /* Garante que o texto fique empilhado verticalmente */
-    justify-content: center;
+.content {
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
 }
 
-.card-title, .card-text, .btn {
-    margin-bottom: 12px; /* Espaçamento entre os elementos */
-    font-weight: bold;
-}
-
-.card-text2 {
-    display: flex;
-    flex-direction: column; /* Empilha o conteúdo verticalmente */
+.card-title {
     margin-bottom: 10px;
-    padding: 0;
+    font-size: 1.5em;
+    color: #333;
 }
 
-.label {
-    font-weight: bold; /* Torna o rótulo mais destacado */
+.aluno-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os cards */
 }
 
-.text {
-    margin-top: 4px; /* Espaço entre o rótulo e o texto */
-    background-color: rgb(215, 215, 215);
-    max-width: 500px; /* Define a largura máxima do elemento */
-    width: 100%; /* Largura total disponível até o valor máximo definido */
-    padding: 5px; /* Adiciona espaçamento interno */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
-    overflow-wrap: break-word; /* Quebra palavras longas para evitar overflow */
-    word-wrap: break-word; /* Compatibilidade com navegadores antigos */
-    word-break: break-word; /* Quebra palavras se necessário */
-    text-align: left; /* Alinha o texto à esquerda */
+.aluno-card {
+    border: 1px solid #ccc;
+    padding: 15px 30px;
+    background-color: #f9f9f9;
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 700px; /* Define uma largura máxima opcional */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 20px;
 }
 
+.aluno-card p {
+    margin: 8px 0;
+}
 
-.btn {
-    padding: 10px 20px;
-    background-color: rgb(71, 250, 17);
-    color: white;
+.aluno-card .descricao {
+    word-wrap: break-word; /* Quebra a linha quando o texto excede a largura */
+    color: #555;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+.botao{
     text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(253, 253, 253);
+    background-color: rgb(138, 107, 96);
+    border-radius: 4px;
+    padding: 5px;
+   
 }
-
-.btn:hover {
-    background-color: rgb(50, 200, 12);
+.botao:hover {
+    background-color: #d22d2d;
+    border-radius: 4px;
 }

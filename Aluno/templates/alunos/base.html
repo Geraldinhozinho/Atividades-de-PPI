@@ -10,15 +10,14 @@
 </head>
 <body>
     <nav class="navbar">
-        <img src="static/image/ifrn.png" alt="Logo" class="logo">
+        <img src="{% static 'image/ifrn.png' %}" alt="Logo" class="logo">
         <ul class="nav-links">
-            <li><a href="#interesses">Interesses</a></li>
+            <li><a href="{% url 'interesses' %}">Interesses</a></li>
             <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#amigos">Amigos</a></li>
         </ul>
     </nav>
-
     <!--Parte central da página-->
     <div class="parte_central">
         {% block parte_central %}

@@ -1,0 +1,30 @@
+
+{% extends 'alunos/base.html' %}
+
+{% load static %}
+
+{% block parte_central %}
+
+    <h1 class="titulo">Bem-vindo</h1>
+
+    <div class="container">
+        
+        <div>
+            <img class="imagem" src="{% static 'image/imagem_geraldo.jpeg' %}" alt="Logo">
+        </div>
+    
+        <div class="content">
+            <h2 class="card-title">Meus Interesses</h2>
+            
+            <div class="aluno-lista">
+                {% for intere in lista1 %}
+                <div class="inter-card">
+                    <p>Nome: {{ intere.nome }}</p>
+                    <p>Interesses:</p>
+                    <p class="descricao">{{ intere.descricao }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div> 
+{% endblock %} 

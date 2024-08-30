@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Aluno
+from .models import Aluno, Interesses
 # Create your views here.
 
 def index(request):
@@ -8,3 +8,10 @@ def index(request):
         'lista': alunos
     }
     return render(request, 'alunos/index.html',contexto)
+
+def interesses(request):
+    inter = Interesses.objects.all()
+    contexto = {
+        'lista1': inter
+    }
+    return render(request, 'alunos/interesses.html',contexto)
