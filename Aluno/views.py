@@ -3,8 +3,8 @@ from .models import Aluno
 # Create your views here.
 
 def index(request):
-    aluno = Aluno.objects.all() # Select do django
+    alunos = Aluno.objects.all() # Select do django
     contexto = {
-        'lista': aluno,
+        'lista': alunos
     }
     return render(request, 'alunos/index.html',contexto)

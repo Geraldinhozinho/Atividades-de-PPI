@@ -3,4 +3,4 @@ from .models import Aluno
 # Register your models here.
 @admin.register(Aluno)
 class AlunoAdmin(admin.ModelAdmin):
-    list_display = ['nome', 'email', 'telefone', 'data_nascimento'] 
+    list_display = ['nome', 'descricao', 'idade', 'curso', 'altura'] 

@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>AAAAAAAAAAAAAAA</h1>
-</body>
-</html>
+{% extends 'alunos/base.html' %}
+
+{% block parte_central %}
+    
+    <h1 class="titulo">Seja bem vindo ao meu blog profissional</h1>
+
+    <div class="container">
+        <div>
+            <img class="imagem" src="static/image/imagem_geraldo.jpeg" alt="Logo">
+        </div>
+
+        {% for aluno in lista %}
+            <div class="lista">
+                <h5 class="card-title">Informações</h5>
+                <p class="card-text">Nome: {{aluno.nome}}</p>
+                <p class="card-text2">
+                    <span class="label">Descrição:</span>
+                    <span class="text">{{ aluno.descricao }}</span>
+                </p>
+                <p class="card-text">Idade: {{aluno.idade}}</p>
+                <p class="card-text">Curso: {{aluno.curso}}</p>
+                <p class="card-text">Altura: {{aluno.altura}}</p>
+                <a href="#" class="btn">Ver mais detalhes</a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %} 

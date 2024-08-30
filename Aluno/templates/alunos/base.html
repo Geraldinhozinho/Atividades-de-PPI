@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="static/image/ifrn.png" alt="Logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="#interesses">Interesses</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#amigos">Amigos</a></li>
+        </ul>
+    </nav>
+
+    <!--Parte central da página-->
+    <div class="parte_central">
+        {% block parte_central %}
+
+        {% endblock %}
+    </div>
+
+
+    <footer class="footer">
+        <p>IFRN - CAMPUS PAU DOS FERROS</p>
+        <p>© 2024 - Programação para a INTERNET</p>
+        <p>PROF JEFF</p>
+    </footer>
+</body>
+</html>
