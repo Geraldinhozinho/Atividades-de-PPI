@@ -1,0 +1,56 @@
+
+
+.left-content {
+    flex-shrink: 0; /* Impede que a imagem diminua em tamanho */
+}
+
+.imagem {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+.card-title{
+    border-bottom: 10px;
+}
+.right-content {
+    flex-grow: 1; /* Permite que o conteúdo ao lado da imagem ocupe o espaço restante */
+}
+
+.interesses-container {
+    margin-top: 20px;
+}
+
+
+
+.cidade{
+    margin-top: 10px;
+}
+
+.interesses-box {
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    word-wrap: break-word; /* Quebra a linha quando o texto excede a largura */
+    margin-top: 10px;
+    border-radius: 2%;
+    margin-bottom: 20px;
+}
+
+.interesse-card .inter{
+    margin-top: 10px;
+}
+.botao{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(253, 253, 253);
+    background-color: rgb(138, 107, 96);
+    border-radius: 4px;
+    padding: 5px;
+   
+}
+.botao:hover {
+    background-color: #d22d2d;
+    border-radius: 4px;
+}

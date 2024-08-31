@@ -13,7 +13,32 @@ class Aluno(models.Model):
     
 class Interesses(models.Model):
     nome = models.OneToOneField(Aluno, on_delete=models.CASCADE)
-    descricao = models.TextField()
+    interesses = models.TextField()
     
     def __str__(self):
-        return self.descricao
+        return self.interesses
+    
+
+class Hobbies(models.Model):
+    titulo = models.CharField(max_length=100)
+    sobre = models.TextField()
+    
+    def __str__(self):
+        return self.titulo
+
+class Sobre (models.Model):
+    email = models.EmailField()
+    cidade = models.CharField(max_length=100)
+    historia = models.TextField()
+    
+    def __str__(self):
+        return self.email
+    
+
+class Amigos(models.Model):
+    nome = models.CharField(max_length=100)
+    descricao = models.TextField()
+    image = models.ImageField(upload_to='media/', null=True, blank=True)
+    
+    def __str__(self):
+        return self.nome

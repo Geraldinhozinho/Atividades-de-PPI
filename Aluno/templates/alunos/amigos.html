@@ -1,0 +1,25 @@
+{% extends 'alunos/base.html' %}
+{% load static %}
+{% block parte_central %}
+    <h1 class="titulo">Bem-vindo</h1>
+    <div class="content-area">    
+        {% for legal in lista4 %}
+        <h2 class="title">Amigo</h2>
+        <div class="info-card">
+            {% if legal.image %}
+            <div class="image-container">
+                <img class="image" src="{{ legal.image.url }}" alt="Imagem do Amigo">
+            </div>
+            {% endif %}
+            <div class="details-container">
+                <p><strong>Nome:</strong> {{ legal.nome }}</p>
+                <p class="description-title"><strong>Descrição do Amiguinho:</strong></p>
+                <div class="description-box">
+                    <p>{{ legal.descricao }}</p>
+                </div>
+                <a href="{% url 'index' %}" class="button">Voltar ao início</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %} 

@@ -1,20 +1,25 @@
 {% extends 'alunos/base.html' %}
+
 {% load static %}
+
 {% block parte_central %}
+
     <h1 class="titulo">Bem-vindo</h1>
+
     <div class="container">
         <div class="left-content">
-            <img class="imagem" src="{% static 'image/imagem_geraldo.jpeg' %}" alt="Logo">
+            <img class="imagem" src="{% static 'image/Animes.jpeg' %}" alt="Logo">
         </div>
+    
         <div class="right-content">
-            <h2 class="card-title">Meus Interesses</h2>
+            <h2 class="card-title">Hobbies</h2>
             <div class="interesses-container">
-                {% for inter in lista1 %}
+                {% for gosto in lista2 %}
                     <div class="interesse-card">
-                        <p><strong>Nome:</strong> {{ inter.nome }}</p>
+                        <p><strong>Nome:</strong> {{ gosto.titulo }}</p>
                         <p class="inter" ><strong>Interesses:</strong></p>
                         <div class="interesses-box">
-                            <p>{{ inter.interesses }}</p>
+                            <p>{{ gosto.sobre }}</p>
                         </div>
                         <a href="{% url 'index' %}" class="botao">Voltar ao início</a>
                     </div>
@@ -22,4 +27,4 @@
             </div>
         </div>
     </div>
-{% endblock %} 
+{% endblock %}

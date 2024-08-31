@@ -1,29 +1,24 @@
 {% extends 'alunos/base.html' %}
 {% load static %}
-
 {% block parte_central %}
-    
     <h1 class="titulo">Seja bem vindo ao meu blog profissional</h1>
-
     <div class="container">
         <div>
             <img class="imagem" src="{% static 'image/imagem_geraldo.jpeg' %}" alt="Logo">
         </div>
-    
         <div class="content">
             <h2 class="card-title">Informações</h2>
-            
             <div class="aluno-lista">
                 {% for aluno in lista %}
-                <div class="aluno-card">
-                    <p>Nome: {{ aluno.nome }}</p>
-                    <p>Descrição:</p>
-                    <p class="descricao">{{ aluno.descricao }}</p>
-                    <p>Idade: {{ aluno.idade }}</p>
-                    <p>Curso: {{ aluno.curso }}</p>
-                    <p>Altura: {{ aluno.altura }}</p>
-                    <a href="#" class="botao">Ver mais detalhes</a>
-                </div>
+                    <div class="aluno-card">
+                        <p>Nome: {{ aluno.nome }}</p>
+                        <p>Descrição:</p>
+                        <p class="descricao">{{ aluno.descricao }}</p>
+                        <p>Idade: {{ aluno.idade }}</p>
+                        <p>Curso: {{ aluno.curso }}</p>
+                        <p>Altura: {{ aluno.altura }}</p>
+                        <a href="{% url 'sobre' %}" class="botao">Ver mais detalhes</a>
+                    </div>
                 {% endfor %}
             </div>
         </div>

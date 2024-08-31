@@ -24,7 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
     path('alunos/index',views.index,name='index'),
-    path('alunos/interesses',views.interesses,name='interesses')
+    path('alunos/interesses',views.interesses,name='interesses'),
+    path('alunos/hobbies',views.gostos,name='hobbies'),
+    path('alunos/sobre',views.sobremim,name='sobre'),
+    path('alunos/amigos',views.friends,name='amigos')
     
 ]
 

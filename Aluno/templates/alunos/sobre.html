@@ -6,15 +6,16 @@
         <div class="left-content">
             <img class="imagem" src="{% static 'image/imagem_geraldo.jpeg' %}" alt="Logo">
         </div>
-        <div class="right-content">
-            <h2 class="card-title">Meus Interesses</h2>
-            <div class="interesses-container">
-                {% for inter in lista1 %}
+        <div >
+            <h2 class="card-title">Informações sobre mim</h2>
+            <div>
+                {% for pessoal in lista3 %}
                     <div class="interesse-card">
-                        <p><strong>Nome:</strong> {{ inter.nome }}</p>
-                        <p class="inter" ><strong>Interesses:</strong></p>
+                        <p><strong>Email: </strong> {{ pessoal.email }}</p>
+                        <p class="cidade"><strong>Cidade: </strong> {{ pessoal.cidade }}</p>
+                        <p class="inter" ><strong>História </strong></p>
                         <div class="interesses-box">
-                            <p>{{ inter.interesses }}</p>
+                            <p>{{ pessoal.historia }}</p>
                         </div>
                         <a href="{% url 'index' %}" class="botao">Voltar ao início</a>
                     </div>

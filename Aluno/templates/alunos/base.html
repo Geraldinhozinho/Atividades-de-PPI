@@ -4,18 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog profissional</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <link href="{% static 'css/interesses.css' %}" rel="stylesheet">
+    <link href="{% static 'css/hobbies.css' %}" rel="stylesheet">
+    <link href="{% static 'css/sobre.css' %}" rel="stylesheet">
+    <link href="{% static 'css/amigos.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'image/LogoDJ.jpeg' %}" type="image/x-icon">
+   
 </head>
 <body>
     <nav class="navbar">
         <img src="{% static 'image/ifrn.png' %}" alt="Logo" class="logo">
         <ul class="nav-links">
             <li><a href="{% url 'interesses' %}">Interesses</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#amigos">Amigos</a></li>
+            <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
+            <li><a href="{% url 'sobre' %}">Sobre</a></li>
+            <li><a href="{% url 'amigos' %}">Amigos</a></li>
         </ul>
     </nav>
     <!--Parte central da página-->
