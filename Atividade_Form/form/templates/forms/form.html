@@ -1,0 +1,23 @@
+{% extends 'forms/base.html' %}
+{% load static %}
+{% block parte_central %}
+    <h1 class="titulo">Matricula de Aluno</h1>
+    <div class="form">   
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit"> Enviar</button>
+        </form>
+    </div> 
+    <div class="msg">
+        {% if sucesso %}
+        <p>Formulário enviado com sucesso!</p>
+    {% endif %}
+    </div>
+    
+    <div class="botao1">
+        <a href="{% url 'index' %}" class="botao">Clique aqui para <strong>Voltar</strong></a>
+    </div>
+
+    
+{% endblock %}

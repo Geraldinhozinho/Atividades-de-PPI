@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <link href="{% static 'css/form.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'image/LogoDJ.jpeg' %}" type="image/x-icon">
+</head>
+<body>
+
+    <h1>Atividade do Formulario</h1>
+    <nav class="navbar">
+        <img src="{% static 'image/ifrn.png' %}" alt="Logo" class="logo">
+    </nav>
+    <div>
+        {% block parte_central %}
+
+        {% endblock %}
+    </div>
+
+
+    <footer class="footer">
+        <p>IFRN - CAMPUS PAU DOS FERROS</p>
+        <p>© 2024 - Programação para a INTERNET</p>
+        <p>PROF JEFF</p>
+    </footer>
+</body>
+</html>
+
+
+
+
